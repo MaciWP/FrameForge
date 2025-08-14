@@ -1,0 +1,110 @@
+
+CPU:
+Optimizes CPU Power Management:
+ValueMax=0, ValueMin=0 (Processor Performance Core Parking Min/Max) → Disables Core Parking
+Ensures all CPU cores remain active, improving performance by preventing cores from being parked to save power.
+
+Disables Energy-Saving Features:
+EnergyEstimationEnabled=0 → Disables Energy Usage Estimation
+Prevents Windows from monitoring energy usage, reducing background resource consumption.
+
+EnergySaverPolicy=1 → Minimizes Energy Saver Mode Impact
+Ensures Energy Saver Mode doesn’t aggressively throttle performance.
+
+CsEnabled=0 → Disables Connected Standby (Modern Standby)
+Prevents Windows from keeping apps in a low-power state, reducing background resource usage.
+
+Improves GPU Scheduling and Task Prioritization:
+Attributes=2 → Optimizes GPU Scheduling Settings
+Adjusts GPU resource management for better responsiveness.
+
+GPU Priority=8 → Sets High GPU Priority
+Prioritizes GPU-intensive tasks for improved graphics performance.
+
+Priority=6 & Scheduling Category="High" → Gives Tasks a High Execution Priority
+Ensures critical applications run smoothly with minimal lag.
+
+Clock Rate=0x10000 → Increases GPU Clock Rate Allocation
+Allows the GPU to run at higher clock speeds when needed.
+
+SFIO Priority="High" & Latency Sensitive="True" → Enhances I/O and Low-Latency Performance
+Optimizes task handling to reduce input lag and improve responsiveness.
+
+Minimizes Timer Delays for Faster Execution:
+CoalescingTimerInterval=0 → Disables Timer Coalescing
+Ensures high-precision timing, reducing delays in task execution and improving system responsiveness.
+
+
+
+
+Display:
+Disables Power-Saving Features for Display & GPU:
+AdaptiveRefreshRate=0 → Disables Adaptive Refresh Rate
+Prevents dynamic refresh rate changes, ensuring consistent frame delivery in applications.
+
+VideoIdleTimeout=0 → Disables Video Idle Timeout
+Stops Windows from turning off the display due to inactivity, preventing interruptions during usage.
+
+Disables GPU Power-Saving Features:
+PowerSavingModeEnabled=0 → Disables GPU Power Saving Mode
+Ensures maximum GPU performance by preventing throttling.
+
+PanelSelfRefresh=0 → Disables Panel Self-Refresh (PSR)
+Stops the display from lowering refresh rates to save power, reducing potential lag in animations.
+
+ForceOffScreenTimeout=0 → Prevents Forced Screen Timeout
+Stops Windows from forcing the display to turn off under specific conditions, ensuring uninterrupted screen activity.
+
+
+
+Gpu:
+Optimizes GPU Performance:
+EnableFrameBufferCompression=0 → Disables Frame Buffer Compression (FBC)
+Prevents compression-related latency in GPU memory, potentially improving frame consistency and reducing micro-stutters.
+
+EnableGpuBoost=1 → Enables GPU Boost
+Allows the GPU to increase clock speeds when needed, improving performance in graphics-intensive applications.
+
+Disables GPU Power Management Driver:
+Start=4 (for GpuEnergyDrv) → Disables the GPU Energy Driver
+Prevents Windows from limiting GPU performance for power savings, ensuring maximum performance at all times.
+
+
+
+
+Network:
+Prevents Network Adapter Power Management:
+PnPCapabilities=0x24 (for 0001 and 0002 network adapters) → Disables selective suspend for network adapters
+Stops Windows from turning off network adapters to save power, preventing connection drops and improving network stability.
+
+DisablePowerManagement=1 → Disables TCP/IP Power Management
+Ensures network performance isn’t throttled by power-saving features, reducing latency and improving speed consistency.
+
+
+
+
+System:
+Disables Energy-Saving Features:
+EnergySaverStatus=0 → Disables Energy Saver mode
+Prevents Windows from reducing power usage, which can lower performance to save battery.
+
+EcoMode=0 → Disables Eco Mode
+Ensures processes aren’t slowed down for energy efficiency, keeping performance consistent.
+
+Disables CPU Power Throttling:
+DynamicThrottlePolicy=0 → Disables Dynamic Throttle Policy
+Stops Windows from adjusting CPU speed dynamically, ensuring it runs at full potential.
+
+PowerThrottlingOff=1 → Disables Power Throttling
+Prevents background apps from being throttled, reducing potential slowdowns in multitasking.
+
+Tweaks Power States:
+HibernateEnabled=0 → Disables Hibernation
+Allows for a full restart of your machine
+
+CsEnabled=0 → Disables Connected Standby (Modern Standby)
+Prevents Windows from keeping apps running in a low-power state, reducing unnecessary background activity.
+
+Adjusts System Timer Resolution:
+GlobalTimerResolutionRequests=1 → Allows Global Timer Resolution Requests
+Lets applications request a more precise timer resolution, improving responsiveness and performance in games and real-time applications.

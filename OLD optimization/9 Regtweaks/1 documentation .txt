@@ -1,0 +1,28 @@
+
+Autorun: "NoDriveTypeAutoRun"=dword:000000FF: This setting disables the AutoRun feature for all drive types, including USB drives, CD/DVD drives, and network drives. It ensures that no programs are automatically run when a drive is inserted or accessed.
+
+SvcHostSplitThresholdInKB: Modifies the threshold for splitting services hosted in svchost.exe to enhance system responsiveness, typically used in fine-tuning system performance.
+
+HideFileExt: Disables hiding file extensions in Windows Explorer. This means file extensions (like .exe, .txt) will be visible.
+
+Hidden: Forces hidden files and folders to be shown in Windows Explorer. It's typically used to ensure that all files are visible.
+
+SerializeTimerExpiration: Adjusts system timer settings for better resource management, ensuring timely responses in certain applications.
+
+SystemResponsiveness: Setting this to 0 lowers the system's responsiveness to background processes to improve performance, especially in games or other high-demand tasks.
+
+PowerThrottlingOff: Disables power throttling, which helps prevent CPU power savings from impacting performance during demanding tasks.
+
+MouseDataQueueSize & KeyboardDataQueueSize: Increase the size of input queues for the mouse and keyboard to reduce lag during heavy input scenarios.
+
+MouseHoverTime: Reduces the time before mouse hover actions trigger their associated behavior (e.g., showing tooltips).
+
+TabPreloader (Edge): Disables tab preloading in Microsoft Edge, which can improve performance by preventing unnecessary resource usage for tabs that aren’t yet active.
+
+StartupDelayInMSec: Eliminates the delay before starting up Windows Explorer, making the system feel more responsive.
+
+EnablePrefetcher: Disables the prefetcher, which is part of Windows' memory optimization. Disabling it may reduce performance in some cases, but could free up resources.
+
+HiberBootEnabled & HibernateEnabled: Disables hybrid boot and hibernation. This can speed up boot time but at the cost of the hibernation feature.
+
+SearchOrderConfig: Disables driver searching when installing new hardware or devices, which could speed up driver installations but may limit flexibility in certain cases.

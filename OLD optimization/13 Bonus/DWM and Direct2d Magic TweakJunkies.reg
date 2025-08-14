@@ -1,0 +1,15 @@
+Windows Registry Editor Version 5.00
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\Dwm]
+"m_bufferCount"=dword:00000001
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Direct2D]
+"EnableRect"=dword:00000001
+"Sharpness"=dword:00000000
+"Optimization"=dword:0000000F
+"MaxInputs"=dword:00000001
+"MinInputs"=dword:00000001
+"Inputs"=dword:00000001
+"ForceD2D1Path"=dword:00000001
+"DisableGammaCorrection"=dword:00000001
+"DisableClearType"=dword:00000001

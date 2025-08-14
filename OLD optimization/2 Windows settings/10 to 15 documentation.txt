@@ -1,0 +1,18 @@
+
+10:
+It prevents apps from showing live tile updates, which can reduce distractions and save system resources.
+
+11:
+removes the fluid scroll animation, making scrolling more immediate and less visually smooth, which may improve performance or reduce motion effects for users who prefer a more direct experience.
+
+12:
+prevents Windows from automatically assigning folder templates based on content, ensuring a uniform folder view.
+
+13:
+disables Fast User Switching in Windows by hiding the option from the user interface. It prevents multiple users from switching accounts without logging out, which can improve security and resource management in shared or managed environments.
+
+14:
+It should prevent users from accessing Ink-related features like Sticky Notes, Sketchpad, and Screen Sketch.
+
+15:
+This registry script reduces power-related latency in Windows by setting all relevant latency tolerance and transition values to the lowest possible setting. It modifies power management and graphics driver settings to prioritize faster wake-up times and responsiveness.

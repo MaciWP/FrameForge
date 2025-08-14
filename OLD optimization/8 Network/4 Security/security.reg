@@ -1,0 +1,22 @@
+Windows Registry Editor Version 5.00
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows NT\DNSClient]
+"DisableMultihomeDNSRegistration"=dword:00000001
+"DisableParallelNameResolution"=dword:00000001
+"DisableSmartNameResolution"=dword:00000001
+"EnableMulticast"=dword:00000000
+
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\Dnscache\Parameters]
+"DisableParallelAandAAAA"=dword:00000001
+
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\LanmanServer\Parameters]
+"SMB1"=dword:00000000
+
+[HKEY_LOCAL_MACHINE\System\CurrentControlSet\Services\NetBT\Parameters\Interfaces]
+"NetBIOSOptions"=dword:00000002
+
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\NetBT\Parameters]
+"EnableLMHOSTS"=dword:00000000
+
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\Tcpip\Parameters]
+"EnableICMPRedirect"=dword:00000000

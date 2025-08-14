@@ -1,0 +1,5 @@
+# Block ICMP pings from all IPs
+$ruleName = "Khorvie Block ICMP Pings"
+$description = "Block all incoming ICMP Echo Request (ping) traffic."
+
+New-NetFirewallRule -DisplayName $ruleName -Direction Inbound -Action Block -Protocol ICMPv4 -LocalPort Any -RemoteAddress Any -Profile Any -Enabled True -Description $description

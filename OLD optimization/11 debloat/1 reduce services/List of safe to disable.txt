@@ -1,0 +1,87 @@
+* i don't want to hear any yap about 'process count doesn't matter' in the comments *
+
+You can disable:
+
+
+
+Background Intelligent Transfer Service: transfers files in the background using idle network bandwidth, commonly used by windows updates
+
+
+Bluetooth: if not needed by the user
+
+
+Connected User Experiences and Telemetry: manages event driven collection and transmission of diagnostic and usage information
+
+
+Data Usage: only disable if you don't need access to certain network settings and information, this can break certain aspects of windows settings
+
+
+Diagnostic Services: only disable if you don't use diagnostic/troubleshooters on your system
+
+
+Distributed Link Tracking Client: maintains links between ntfs files within a computer or across computers in a network
+
+
+Downloaded Maps Manager: windows service for application access to downloaded maps
+
+
+Game Bar/DVR: can affect use of gamemode in certain cases, can be troublesome to fully disable so visit the folder on how to disable if you wish to do so
+
+
+GameInput: enables keyboard, mice, gamepads, and other input devices to be used with the gameinput api, many people will never use this
+
+
+Geolocation service: this service monitors the current location of the system and manages geofences
+
+
+Hyper V related services: many will not run by default unless you use hyper v, so if you don't use virtual machines but these services are running, you can disable them
+
+
+IP Helper: dont disable if you use; provides tunnel connectivity using IPv6 tech (6to4, isatap, port proxy, teredo)
+
+
+Parental Controls: despite being a manual service sometimes it will run on its own
+
+
+Print Spooler: disable if you dont use printer
+
+
+Quality Windows Audio Video Experience: dont disable if you use VR
+
+
+Remote Registry: enables remote users to modify registry settings on this computer
+
+
+Retail Demo Service: controls device activity while in retail demo mode
+
+
+Sync host: one drive related, only disable if you dont use. can be hard to disable without visiting the registry, if you wish to disable it is provided in the second folder, if you want to reenable, edit the reg file and change the value from 4 to 2
+
+
+Sysmain: primarily used as a prefetcher, it is valid for hard drive users and for slow ssds, can be disabled outside of that
+
+
+TCP/IP NetBIOS Helper: provides support for the NetBIOS over tcp/ip and NetBIOS name resolution for clients on the network
+
+
+Telephony: provides TAPI support for programs that control telephony devices on the local computer and through the LAN on servers that are also running the service
+
+
+Themes: only disable if you don't care about Window themes, can break some windows settings in certain scenarios
+
+
+Windows Search: provides content indexing, property caching, and search results for files, email and other content
+
+
+Xbox related services: only do if you don't play any games that require it
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,7 @@
+before running the powershell script you need to unblock scripts
+
+open powershell in admin and run this Set-ExecutionPolicy unrestricted
+
+if done correctly you should get the option to press yes to all, do so
+
+now run the script

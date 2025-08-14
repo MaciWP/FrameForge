@@ -1,0 +1,24 @@
+autologgers:
+
+for %%X in (...) do: Iterates through a list of session names provided.
+
+logman stop %%X -ets: Stops the event trace session %%X for each session in the list.
+
+pause: Pauses the script after execution to allow the user to see the output.
+
+disabling logging related to hardware drivers (WiFi, NVIDIA) or system components (NTFS, ReFS, etc.) can reduce CPU and disk I/O load, which might improve system performance or privacy in some cases.
+
+
+
+
+group policy tweaks:
+
+contains various group policy tweaks aimed at reducing tracking/spyware/unneeded features reporting to Microsoft
+
+
+
+
+
+blocking telemetry ips:
+
+stops the ability for data to be sent out to certain Microsoft ips

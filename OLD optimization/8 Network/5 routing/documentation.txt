@@ -1,0 +1,5 @@
+it can in some cases route your connection to game servers much better than how your isp will naturally route your connection
+
+i do NOT recommend buying before trying, test with a free trial
+
+while it works for some people, it will NOT work for all

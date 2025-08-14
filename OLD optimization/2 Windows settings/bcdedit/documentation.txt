@@ -1,0 +1,15 @@
+Enable x2APIC
+Command: bcdedit /set x2apicpolicy Enable
+x2APIC improves interrupt handling for multi-core CPUs by expanding the number of available interrupt IDs. This enhances performance and scalability, especially on high-core systems, by reducing overhead and improving efficiency.
+
+Disable Legacy APIC Mode
+Command: bcdedit /set uselegacyapicmode No
+Disabling legacy APIC mode forces the system to use modern interrupt handling, which is more efficient on multi-core processors. This helps improve performance and scalability by eliminating outdated methods designed for older, low-core count systems.
+
+Set Time-Stamp Counter Synchronization Policy
+Command: bcdedit /set tscsyncpolicy enhanced
+This setting ensures the Time-Stamp Counter (TSC) remains synchronized across all CPU cores, reducing timing inconsistencies. It improves accuracy in time-sensitive applications, such as high-performance computing tasks, by ensuring all cores use a consistent time reference.
+
+Disable Boot User Interface (UI)
+Command: bcdedit /set bootux disabled
+Disabling the graphical boot UI removes visual elements like the Windows logo and loading animation, streamlining the startup process. This can slightly speed up boot times and is useful for systems that prioritize fast startups, such as gaming rigs or performance-focused environments.

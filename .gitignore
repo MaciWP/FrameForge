@@ -1,0 +1,47 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+.venv/
+*.egg-info/
+dist/
+build/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+.DS_Store
+
+# Project specific
+backups/
+logs/
+*.log
+benchmarks/
+test_results/
+*.bak
+*.tmp
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# Sensitive data
+config.local.json
+secrets.json
+*.key
+*.pem
+
+# Test files
+test_*.py
+temp_*.py
+
+# Old optimizations backup (opcional, si no quieres subir los .reg)
+# OLD optimization/

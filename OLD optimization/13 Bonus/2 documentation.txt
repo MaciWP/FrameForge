@@ -1,0 +1,99 @@
+Many of these are experimental or undocumented; found by using IDA (interactive disassembler) which is used to reverse engineer; make sure to make a secondary restore point
+
+
+***** additional/worker thread *****
+
+Sets these registry keys:
+
+AdditionalCriticalWorkerThreads
+
+AdditionalDelayedWorkerThreads
+
+These increase the number of kernel threads, potentially improving responsiveness on systems with high CPU usage, but can backfire if set too high (oversaturation).
+
+
+
+***** chief specialfixed *****
+
+ Power Tweaks (PDC Section)
+Disables timeouts, telemetry, and watchdogs that could delay system transitions or log/report power events.
+
+Speeds up wake/sleep transitions.
+
+Reduces Windows' responsiveness to power state changes.
+
+May improve consistency in low-latency scenarios.
+
+ WDF Driver Power Management
+Controls how the Windows Driver Framework (WDF) handles idle power states.
+
+Keeps devices active in working state.
+
+Disables directed power transitions (DPT), which may cause delays or instability in specific setups.
+
+
+
+ GraphicsDrivers\SCHEDULER
+Tunes how frames are flipped, queued, prioritized.
+
+HwIndependentFlip=2, FlipOverrideMode=3, ForegroundPriorityBoost=1 – prioritize active applications.
+
+QueuedPresentLimit=1, MaxFrameLatency=1 – lowers render queue size, reducing input lag.
+
+TdrLevel=0 disables driver timeout detection – can prevent GPU driver resets during high load.
+
+
+
+General GraphicsDrivers
+More tweaks focused on flip modes, DWM (Desktop Window Manager), and frame queuing:
+
+Disables DWM VSync.
+
+Enables FlipDiscard, OfferReclaim, ContextNoPatchMode – optimizes resource management for fullscreen/windowed apps.
+
+Reduces latency and buffer count to 1 frame (can boost responsiveness but may cause tearing/stability issues).
+
+
+
+
+***** dwm reg and dwm batch *****
+
+This script applies deep customizations to Desktop Window Manager (DWM) settings, aiming to:
+
+Reduce or eliminate buffering, frame queuing, and visual effects
+
+Disable unnecessary GPU-based rendering paths
+
+Improve input latency and minimize resource usage for low-latency or high-performance setups, especially on low-end or highly optimized systems
+
+
+
+***** kernel fixed *****
+
+DPC and Interrupt Tweaks: Massive changes to DPC (Deferred Procedure Calls) timers, queue depths, watchdog settings, and interrupt behavior to aggressively reduce latency and possibly increase responsiveness.
+
+Timer/Clock Tweaks: Forces global timer resolution, disables dynamic tick, sets min/max increment to 1 — tuning for tighter CPU scheduling.
+
+Thread/Worker Tuning: Increases MaximumKernelWorkerThreads, enables ThreadDpcEnable, adjusts thread priorities and boosts.
+
+Power Management Tweaks: Disables things like lightweight suspend, CPU throttling, frozen processor power-off — forcing full performance modes.
+
+Security/Debug Tweaks: Disables Watson reporting, exception chain validation, kernel debugger (KdDisable), and possibly other telemetry/debug mechanisms.
+
+Performance Optimizations: Enables LockPagesInMemory, prefetcher disabled, scheduler latency minimized, etc.
+
+
+
+***** swap chain and mouse *****
+
+This script applies registry and environment tweaks to reduce input and frame latency by enabling raw input, hardware cursor, tearing, and disabling DWM. It targets faster mouse/keyboard response and more aggressive GPU behavior, especially for DXGI/DX12. Some values are undocumented or NVIDIA-specific and may not work on all systems.
+
+***** variablesfixed *****
+
+This script sets several environment variables aiming to push the kernel and graphics system toward ultra-low latency, such as faking max HZ frequency, minimizing CPU interrupts, and forcing AVX2 instructions.
+
+
+
+
+
+

@@ -1,0 +1,14 @@
+Windows Registry Editor Version 5.00
+
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\Windows Search]
+"AllowCloudSearch"=dword:00000000
+"AllowCortana"=dword:00000000
+"AllowCortanaAboveLock"=dword:00000000
+"AllowSearchToUseLocation"=dword:00000000
+"ConnectedSearchUseWeb"=dword:00000000
+"DisableWebSearch"=dword:00000001
+"EnableDynamicContentInWSB"=dword:00000000
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\SearchCompanion]
+"DisableContentFileUpdates"=dword:00000001

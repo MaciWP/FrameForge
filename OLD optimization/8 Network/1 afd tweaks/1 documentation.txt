@@ -1,0 +1,36 @@
+BufferAlignment: refers to the alignment of memory buffers used for network communication. This setting optimizes how data buffers are organized in memory, affecting network performance, particularly in scenarios involving high-speed data transfers. Proper buffer alignment ensures that memory is accessed in a way that is most efficient for the processor. Misaligned buffers can lead to performance degradation, as the CPU might need to perform additional work to access memory in non-optimal ways. The buffer alignment setting helps ensure that buffers are aligned to natural boundaries for the system’s architecture, improving data throughput and reducing latency.
+
+
+Default Send/Receive Window: Affects how data is stored and sent.
+For high-performance systems and high-bandwidth network connections, increasing the buffer sizes for both the receive and send windows can help maximize throughput and reduce latency.
+On slower networks or in environments with limited resources (e.g., low memory), it may be better to keep these values at their default or lower settings to avoid unnecessary overhead.
+
+
+Disable Address Sharing: forces each connection to use a unique IP address, which can be helpful in certain scenarios, such as improving performance or resolving issues with application conflicts over the same IP
+
+
+DisableChainedReceive: disabling can simplify memory management since the system wont need to link multiple buffers together. it can reduce the likelihood of memory fragmentation or issues related to memory allocation failure in complex systems. it can also improve compatibility for older or legacy systems
+
+
+DisableDirectAcceptEx: DirectAcceptEx can sometimes cause instability and can potentially introduce security vulnerabilities or unpredictability in certain configurations. this setting would be worth testing between its values of 0 and 1 (edit the .reg and change the number)
+
+
+DisableRawSecurity: reduces the amount of additional processing to apply encryption or other security measures directly to network packets which can introduce overhead. disabling might improve performance in high-throughput or latency sensitive applications where security provided by higher layers is sufficient
+
+
+DoNotHoldNICBuffers: NIC buffers will be released immediately after they are processed, which could improve the efficiency of buffer management, especially in high-performance network environments. this can prevent memory bloat and reduce the amount of memory held by the network stack and can reduce delays
+
+
+DynamicSendBufferDisable: Disabling dynamic buffer adjustment ensures that the send buffer size is always fixed. Dynamic adjustment of buffers adds some overhead, as the system needs to monitor network traffic and adjust buffer sizes accordingly. Disabling this dynamic adjustment can reduce the computational load on the system, especially in environments where high performance and low CPU usage are required. it can also in some cases lead to bufferbloat
+
+
+FastCopyReceiveThreshold: enabling fast copy at this early stage could improve performance slightly by reducing processing time for each small packet. However, it might also result in unnecessary overhead if the packets are too small to benefit from the fast copy technique
+
+
+FastSendDatagramThreshold:controls the size of the datagram buffer at which fast send techniques will be applied for sending network data. This setting can improve performance by enabling optimized methods of sending data once the datagram size exceeds the threshold.
+
+
+IgnoreOrderlyRelease: determines whether the system will ignore the orderly release of a TCP connection. Normally, TCP connections go through a graceful teardown process where both sides agree to close the connection in an orderly manner. If "Ignore Orderly Release" is enabled, the system may bypass some steps of this process
+
+
+IgnorePushBitOnReceives: The Push Bit is used in the TCP protocol to signal that data should be immediately passed to the receiving application rather than being buffered. This might be useful for reducing the number of interrupts for small, frequent data packets, allowing them to be processed in larger chunks.

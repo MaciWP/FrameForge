@@ -1,0 +1,25 @@
+Disables USB Power-Saving Features for Stability & Performance:
+DisableSelectiveSuspend=1 (Multiple Keys) → Disables USB Selective Suspend
+Prevents Windows from putting USB devices into low-power mode, reducing disconnections and improving responsiveness.
+
+SelectiveSuspendEnabled=0 (HID & USBHUB3) → Disables Selective Suspend for HID & USB Hubs
+Ensures USB peripherals (e.g., keyboards, mice, controllers) stay active, preventing input lag or delayed wake-ups.
+
+EnhancedPowerManagementEnabled=0 → Disables Enhanced Power Management for USB
+Stops Windows from limiting power to USB devices, reducing potential performance issues with external drives and peripherals.
+
+DeviceIdleEnabled=0 → Disables USB Idle Mode
+Ensures USB devices don’t enter a low-power state, keeping them instantly responsive.
+
+Improves USB Compatibility & Reduces Interruptions:
+DisableLegacyUSBSupport=1 → Disables Legacy USB Support
+Prevents conflicts with older USB standards, improving stability for modern USB devices.
+
+PowerSettings=0 (usbaudio) → Disables Power Saving for USB Audio
+Keeps USB audio devices fully powered, preventing sound dropouts or delays.
+
+DisableWakeFromSuspend=1 → Prevents USB Devices from Waking the System
+Stops USB peripherals from waking the computer unintentionally, reducing unnecessary power-ups.
+
+ForceHCResetOnResume=1 → Forces USB Controller Reset on Resume
+Ensures a clean reset of the USB controller after sleep/hibernate, reducing device reconnection issues.

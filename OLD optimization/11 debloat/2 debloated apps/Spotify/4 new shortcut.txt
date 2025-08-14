@@ -1,0 +1,1 @@
+right click on your current shortcut, go to file location, create a new shortcut for spotify and use that one instead of the one given by default

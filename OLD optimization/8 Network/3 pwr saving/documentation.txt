@@ -1,0 +1,12 @@
+Network Power Management Tweaks:
+EnableDynamicPowerGating (set to 0) – Disables dynamic power gating for the network adapter, preventing the adapter from entering low-power states and ensuring constant performance.
+
+EnableSavePowerNow (set to 0) – Prevents the network adapter from saving power in the current state, ensuring that the device operates at full power at all times.
+
+NicAutoPowerSaver (set to 0) – Disables automatic power-saving features for the NIC, ensuring that the network adapter runs at maximum performance.
+
+Game-Related Latency Optimization:
+Latency Sensitive (set to True in Games tasks) – Prioritizes latency-sensitive applications (e.g., games) for smoother performance by reducing background tasks that may affect responsiveness.
+
+Network Driver Tweaks:
+EnableNicAutoPowerSaverInSleepStudy (set to 0) – Disables NIC auto power-saving during sleep study for more consistent network performance, even during power-saving or low-power modes.

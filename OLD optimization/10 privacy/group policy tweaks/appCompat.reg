@@ -1,0 +1,9 @@
+Windows Registry Editor Version 5.00
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\AppCompat]
+"AITEnable"=dword:00000000
+"DisableInventory"=dword:00000001
+"DisableUAR"=dword:00000001
+
+[HKEY_CURRENT_USER\Software\Policies\Microsoft\Windows\AppCompat]
+"DisablePCA"=dword:00000001

@@ -1,0 +1,25 @@
+1 services:
+
+debloating these often will have minimal benefit, its important to only disable ones you 100% don't use, debloating too much of these can brick your system if you dont know what you are doing
+
+you will however see benefit from debloating services if you have a low ram system, or if certain processes are eating up a lot like peripheral softwares
+
+
+
+2 debloated apps:
+
+doesn't necessarily improve performance but it will take up less ram
+
+
+
+3 device cleaner:
+
+ensure all your currently used devices are plugged in and in use to prevent accidental deletion
+
+old versions of drivers might cause conflicts or slow down hardware detection; this wont increase video game performance
+
+
+
+4 background items
+
+stops certain background/startup scripts from running on boot/in the background

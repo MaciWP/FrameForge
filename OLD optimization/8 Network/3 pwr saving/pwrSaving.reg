@@ -1,0 +1,14 @@
+Windows Registry Editor Version 5.00
+
+
+[HKEY_LOCAL_MACHINE\SYSTEM\ControlSet001\Control\Class\{4d36e972-e325-11ce-bfc1-08002be10318}\0001]
+"EnableDynamicPowerGating"=dword:00000000
+"EnableSavePowerNow"=dword:00000000
+"NicAutoPowerSaver"=dword:00000000
+
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Multimedia\SystemProfile\Tasks\Games]
+"Latency Sensitive"="True"
+
+[HKEY_LOCAL_MACHINE\SYSTEM\ControlSet001\Services\NDIS\Parameters]
+"EnableNicAutoPowerSaverInSleepStudy"=dword:00000000

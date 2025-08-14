@@ -1,0 +1,4 @@
+Windows Registry Editor Version 5.00
+
+[HKCU\Software\NVIDIA Corporation\NvTray]
+"StartOnLogin"=dword:00000000

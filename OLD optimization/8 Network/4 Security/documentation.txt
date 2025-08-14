@@ -1,0 +1,148 @@
+Security:
+DNS Client Tweaks:
+DisableMultihomeDNSRegistration (set to 1) – Disables the registration of multiple DNS entries for multihomed systems, improving DNS resolution by using a single primary address.
+
+DisableParallelNameResolution (set to 1) – Disables parallel DNS name resolution, forcing the system to resolve domain names sequentially, which can help avoid conflicts or errors in name resolution.
+
+DisableSmartNameResolution (set to 1) – Disables the use of smart name resolution techniques, ensuring that the system resolves names using traditional methods.
+
+EnableMulticast (set to 0) – Disables multicast DNS, which can reduce network overhead and increase security by preventing unnecessary multicast traffic.
+
+DNS Cache Tweaks:
+DisableParallelAandAAAA (set to 1) – Disables parallel A (IPv4) and AAAA (IPv6) record resolution, which forces the system to resolve one record type at a time for better reliability and potential performance improvement.
+
+SMB and NetBIOS Tweaks:
+SMB1 (set to 0 in LanmanServer) – Disables SMB1 (Server Message Block 1.0), improving security by disabling this legacy and insecure protocol.
+
+NetBIOSOptions (set to 2) – Disables NetBIOS over TCP/IP, which can improve network performance and security by removing legacy name resolution methods.
+
+EnableLMHOSTS (set to 0) – Disables LMHOSTS file-based name resolution, which can help reduce reliance on old networking protocols and prevent potential conflicts.
+
+TCP/IP Tweaks:
+EnableICMPRedirect (set to 0) – Disables ICMP redirects, preventing the system from accepting network redirection messages that could potentially be used for malicious purposes (e.g., man-in-the-middle attacks).
+
+
+
+
+Restrict ntlm:
+
+LSA (Local Security Authority) Tweaks:
+LmCompatibilityLevel (set to 5) – Sets the LAN Manager compatibility level. A value of 5 indicates the highest level of security, as it only allows NTLMv2 (a more secure version of NTLM) authentication and disables weaker authentication methods like LM (LAN Manager) and NTLMv1.
+
+RestrictSendingNTLMTraffic (set to 2) – Restricts sending NTLM traffic over the network. A value of 2 means that only NTLMv2 authentication is allowed, and it blocks NTLMv1, which is less secure.
+
+LanmanWorkstation Tweaks:
+EnableLMHash (set to 0) – Disables the use of LM hash in the system, further enhancing security. LM hashes are considered weak and outdated, so disabling them ensures that only stronger hashes (like NTLM or NTLMv2) are used for network authentication.
+
+
+
+
+protocol methods:
+
+Disabling SSL and TLS Versions:
+SSL 2.0 and SSL 3.0: Both protocols are outdated and vulnerable, so they are completely disabled for both the client and server.
+
+TLS 1.0 and TLS 1.1: These versions are also considered weak and insecure. Disabling them ensures that only more secure versions of TLS are used.
+
+Enabling TLS 1.2:
+TLS 1.2 is explicitly enabled and set as the preferred protocol for both the client and server. This version is more secure and widely supported in modern systems.
+
+
+
+
+disable rdp:
+
+"fDenyTSConnections"=dword:00000001: This value prevents users from establishing Remote Desktop sessions to the computer, effectively disabling RDP.
+
+
+
+
+block icmp ps1:
+
+Breakdown:
+$ruleName: The rule is named "Block ICMP Pings."
+
+$description: Provides a description of the rule, which is "Block all incoming ICMP Echo Request (ping) traffic."
+
+New-NetFirewallRule: Creates a new inbound firewall rule.
+
+-DisplayName: The name shown for the rule.
+
+-Direction Inbound: The rule applies to incoming traffic.
+
+-Action Block: This action blocks the traffic.
+
+-Protocol ICMPv4: Targets ICMPv4 packets (used for pings).
+
+-LocalPort Any: Applies to any local port.
+
+-RemoteAddress Any: The rule applies to any remote IP address.
+
+-Profile Any: The rule applies to all network profiles (Domain, Private, Public).
+
+-Enabled True: Enables the rule.
+
+-Description: Provides a description for the rule.
+
+
+
+
+allow pc to be discoverable:
+
+disables the wizard asking if you want your pc to be discoverable
+
+
+
+
+
+disable all profiles:
+
+netsh advfirewall firewall set rule group="Network Discovery": This part of the command specifies the rule group you want to modify, which in this case is "Network Discovery". Network Discovery allows a device to see other devices on the network and be seen by others.
+
+new enable=No: This part disables the rule group, effectively turning off Network Discovery.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

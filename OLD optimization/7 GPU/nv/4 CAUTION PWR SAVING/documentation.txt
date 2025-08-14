@@ -1,0 +1,44 @@
+1:
+Disables Power-Saving Features for Full GPU Performance:
+RmClkPowerOffDramPllWhenUnused=0 → Prevents the GPU from powering down its memory PLL (phase-locked loop) when idle, ensuring faster memory access during workloads.
+RMDisableOptimalPowerForPadlinkPll=1 → Disables optimal power saving for the padlink PLL, keeping it at higher power for consistent performance.
+RMPcieLtrOverride=2 → Adjusts the PCIe latency timer for more stable and consistent performance in PCIe devices.
+
+Disables Performance Throttling and Latency Reduction:
+RMDisableGpuASPMFlags=3 → Disables the GPU Active State Power Management (ASPM), preventing performance throttling by allowing the GPU to stay at maximum performance.
+RMDisablePerIntrDPCQueueing=1 → Disables Deferred Procedure Call (DPC) queuing, reducing latency for faster processing.
+RMElpgStateOnInit=3 → Forces the GPU to use a low-power state during initialization, reducing power consumption during boot.
+RmMIONoPowerOff=1 → Ensures the GPU remains powered without turning off memory or I/O.
+
+Enables Stable GPU Operations:
+RMGC6Feature=0xAAAAA & RMGC6Parameters=0x55 → Configures GPU to use stable states without power-saving interference, ensuring consistent performance during heavy loads.
+RMGpuId=0x100 → Identifies the GPU model, helping to ensure the correct configuration for performance.
+TCCSupported=0 → Disables Thermal Control Circuit (TCC), which is typically used for thermal throttling, to ensure better GPU performance at higher temperatures.
+PruningMode=0 → Disables power-saving pruning modes, allowing for all features to be available for maximum performance.
+RMFspg=0xF → Enables more aggressive performance tuning for the GPU's operational state.
+
+
+
+
+2: 
+Disables Power Management for Maximum GPU Performance:
+DisableDynamicPstate=1 → Disables dynamic performance scaling, ensuring the GPU runs at full speed.
+PowerMizerEnable=0 & PowerMizerLevel/AC=3 → Forces max performance mode instead of power-saving.
+DisableClockGating=1 & DisableDynamicClockGating=1 → Keeps GPU clocks active for lower latency.
+DisableULPS=1 → Disables Ultra Low Power State (ULPS) to prevent performance drops in multi-GPU setups.
+PreferredPerformanceMode=1 → Forces the GPU to prioritize performance over power efficiency.
+
+Reduces Input & Rendering Latency:
+Various latency settings (D3PCLatency, LOWLATENCY, Node3DLowLatency = 1) → Optimizes GPU scheduling for lower frame rendering latency.
+VRDirectFlipDPCDelayUs=1 & VRDirectFlipTimingMarginUs=1 → Enhances VR frame delivery timing.
+vrrCursorMarginUs, vrrDeflickerMarginUs, vrrDeflickerMaxUs = 1 → Improves Variable Refresh Rate (VRR) consistency.
+Disables Power-Throttling & Frame-Limiting Features:
+EnableIdlePowerSavings=0, EnablePowerThrottle=0, EnableVoltageOptimizations=0 → Prevents the GPU from reducing voltage or power usage.
+DisableIdlePowerManagement=1 & DisablePowerThrottling=1 → Ensures the GPU maintains stable high performance.
+DisableVoltageOptimizations=1 → Prevents automatic voltage reduction, ensuring stability under heavy loads.
+DisableFrameRateLimiter=1 → Removes artificial FPS caps that could hinder performance.
+
+Forces High Performance & Stability:
+ForcePstate=1 & ForceVoltage=1 → Locks the GPU to its highest performance state.
+PreferMaxPerf=1 & PreferConsistentPerf=1 → Prioritizes stable, consistent frame rates over power savings.
+MaxFrameRate=0 → Removes any driver-level FPS cap.

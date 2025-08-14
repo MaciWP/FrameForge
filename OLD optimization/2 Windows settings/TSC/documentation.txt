@@ -1,0 +1,9 @@
+tsc is part of the cpu itself, meaning it doesn't rely on external hardware clocks. it works by counting cycles since the processor was powered on, its extremely fast and precise in comparison to timer resolution.
+
+bcdedit /deletevalue useplatformclock: useplatofrm clock makes windows use hpet instead of tsc as the primary timer, hpet is slower than tsc but can sometimes provide improved timing accuracy in rare cases. deleting this value allows windows to automatically choose the best timer, usually tsc
+
+
+bcdedit /deletevalue useplatformtick: forces windows to use a fixed interval timer tick regardless of cpu power saving states or dynamic clock adjustments. having this enabled often degrades performance by disabling tickless mode. so by deleting this value we can allow back tickless mode for improved performance
+
+for this tweak to fully work, hpet should be enabled in bios, if you dont have a bios then dont sweat it
+for more info see: https://sites.google.com/view/melodystweaks/misconceptions-about-timers-hpet-tsc-pmt

@@ -1,0 +1,33 @@
+netsh Commands:
+
+netsh int tcp set global dca=enabled – Enables Data Center Bridging (DCA), optimizing data transfers and reducing latency in high-throughput environments.
+
+netsh int tcp set global netdma=enabled – Enables Network Direct Memory Access (NetDMA), which improves data transfer efficiency by offloading processing to the network adapter.
+
+netsh interface isatap set state disabled – Disables ISATAP (Intra-Site Automatic Tunnel Addressing Protocol), which can improve performance in environments where IPv6 is not used.
+
+netsh int tcp set global timestamps=disabled – Disables TCP timestamping, reducing overhead in network communications.
+
+
+
+
+
+Registry Tweaks:
+
+TcpTimedWaitDelay (set to 30) – Reduces the time spent in the TIME_WAIT state, improving TCP connection reuse and system responsiveness.
+Tcp1323Opts (set to 0) – Disables TCP Window Scaling, which may reduce performance for certain networks but ensures backward compatibility.
+TcpMaxConnectRetransmissions (set to 1) – Limits TCP connection retransmissions, decreasing the time spent retrying failed connections.
+DelayedAckFrequency (set to 1) – Reduces the frequency of delayed acknowledgments, improving response times.
+DelayedAckTicks (set to 1) – Further optimizes delayed acknowledgment behavior, speeding up data acknowledgment.
+MultihopSets (set to 15) – Adjusts multi-hop timeout to improve performance in complex network routing situations.
+IRPStackSize (set to 50) – Increases IRP (I/O Request Packet) stack size, improving server-side networking performance.
+SizReqBuf (set to 17424) – Increases the size of the buffer for server requests, enhancing data throughput.
+Do not use NLA (set to 1) – Disables Network Location Awareness (NLA) to improve performance by reducing unnecessary network checks.
+NegativeCacheTime (set to 0) – Disables caching of DNS negative responses, improving DNS lookup performance.
+NegativeSOACacheTime (set to 0) – Disables caching of DNS Start of Authority (SOA) negative responses to improve DNS performance.
+NetFailureCacheTime (set to 0) – Disables caching for network failure information, optimizing network failover time.
+EnableAutoDoh (set to 2) – Enables DNS over HTTPS (DoH) for more secure and efficient DNS queries.
+NonBlockingSendSpecialBuffering (set to 1) – Improves non-blocking send buffer performance, especially for high-throughput applications.
+TCPNoDelay (set to 1) – Disables TCP delay acknowledgment for faster communication.
+NetworkThrottlingIndex (set to 0xFFFFFFFF) – Removes network throttling, ensuring maximum network throughput.
+NonBestEffortLimit (set to 0) – Disables the non-best-effort traffic limitation to optimize network usage for priority tasks.

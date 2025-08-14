@@ -1,0 +1,5 @@
+Windows Registry Editor Version 5.00
+
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\AFD\Parameters]
+"FastSendDatagramThreshold"=dword:00000400
+"FastCopyReceiveThreshold"=dword:00000400

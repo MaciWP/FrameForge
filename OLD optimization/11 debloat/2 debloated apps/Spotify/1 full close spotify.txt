@@ -1,0 +1,6 @@
+make sure the spotify you have installed is not from Microsoft store
+
+
+doing these got me from around 340mb avg usage down to 270 avg usage.
+
+not huge but a debloat is a debloat

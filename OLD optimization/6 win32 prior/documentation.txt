@@ -1,0 +1,4 @@
+Optimizes CPU Scheduling for Performance:
+Win32PrioritySeparation=0x2A → Increases Foreground Application Performance
+
+Adjusts CPU scheduling to prioritize foreground applications over background tasks, ensuring smoother performance for active programs (e.g., games, video editing, and other intensive applications).

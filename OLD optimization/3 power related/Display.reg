@@ -1,0 +1,13 @@
+Windows Registry Editor Version 5.00
+
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Power\ModernSleep]
+"AdaptiveRefreshRate"=dword:00000000
+
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Power]
+"VideoIdleTimeout"=dword:00000000
+
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\GraphicsDrivers]
+"PowerSavingModeEnabled"=dword:00000000
+"PanelSelfRefresh"=dword:00000000
+"ForceOffScreenTimeout"=dword:00000000
+

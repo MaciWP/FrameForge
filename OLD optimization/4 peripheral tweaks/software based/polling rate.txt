@@ -1,0 +1,5 @@
+often best to leave at a standard 1000 polling rate due to many systems/cpu handling anything above that, if you have a good system and a hardware that supports higher, it could be worth testing 2000hz
+
+cool video from Wooting that talks about true polling vs fake polling
+only need like the first 2 min and 30 seconds
+ https://www.youtube.com/watch?v=GENQPeDLUeQ

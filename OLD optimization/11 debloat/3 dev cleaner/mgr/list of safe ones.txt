@@ -1,0 +1,15 @@
+once inside, start with view > devices by connection
+
+Hyper V related or hypervisor are fine to disable if you dont use its virtualization
+
+remote desktop device redirector
+
+ndis virtual network adapter enumerator
+
+nvidia virtual audio device
+
+hpet > (makes sure tsc works proper)
+
+unneeded pcie downstream switch ports
+
+Bluetooth if unneeded

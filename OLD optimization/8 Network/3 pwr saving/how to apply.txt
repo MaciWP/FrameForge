@@ -1,0 +1,14 @@
+HKEY_LOCAL_MACHINE\SYSTEM\ControlSet001\Control\Class\{4d36e972-e325-11ce-bfc1-08002be10318}
+
+go through 0000, 0001, etc etc until under DriverDesc you find your current nic
+
+then right click on pwrSaving.reg and edit it, where you see 0000 within the first set of tweaks, replace that number with the number of your nic's folder
+
+so if the driver desc for your nic is in 0002 then replace
+[HKEY_LOCAL_MACHINE\SYSTEM\ControlSet001\Control\Class\{4d36e972-e325-11ce-bfc1-08002be10318}\0000]
+
+into
+
+[HKEY_LOCAL_MACHINE\SYSTEM\ControlSet001\Control\Class\{4d36e972-e325-11ce-bfc1-08002be10318}\0002]
+
+then save with ctrl s and then run the bat

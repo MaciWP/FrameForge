@@ -1,0 +1,10 @@
+Windows Registry Editor Version 5.00
+
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Lsa]
+"LmCompatibilityLevel"=dword:00000005
+
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Lsa\MSV1_0]
+"RestrictSendingNTLMTraffic"=dword:00000002
+
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\LanmanWorkstation\Parameters]
+"EnableLMHash"=dword:00000000

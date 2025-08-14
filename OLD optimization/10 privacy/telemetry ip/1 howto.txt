@@ -1,0 +1,25 @@
+before running the powershell script you need to unblock scripts
+
+open powershell in admin and run this Set-ExecutionPolicy unrestricted
+
+if done correctly you should get the option to press yes to all, do so
+
+now run the script
+
+afterwards reblock scripts by typing into an admin powershell Set-ExecutionPolicy Restricted
+
+
+
+
+
+For 2: hosts, edit the file and paste with these
+
+0.0.0.0 vortex.data.microsoft.com
+0.0.0.0 settings-win.data.microsoft.com
+0.0.0.0 watson.telemetry.microsoft.com
+0.0.0.0 ocsp.digicert.com
+0.0.0.0 fe3.delivery.mp.microsoft.com
+0.0.0.0 wpad.microsoft.com
+0.0.0.0 browser.events.data.microsoft.com
+0.0.0.0 activity.windows.com
+0.0.0.0 geo-prod.do.dsp.mp.microsoft.com
